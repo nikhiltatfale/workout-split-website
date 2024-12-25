@@ -1,0 +1,122 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 20px 0;
+    color: #333;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 200px; /* Restrict width for medium size */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#workout-container {
+    margin-top: 30px;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 90%; /* Adjust to fit smaller screens */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.exercise {
+    margin: 20px 0;
+}
+
+video {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 14px; /* Slightly smaller font for tablets */
+        padding: 8px 16px;
+        max-width: 180px; /* Slightly smaller width for medium screens */
+    }
+
+    #workout-container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        width: 90%; /* Keep buttons consistent on mobile */
+        max-width: none; /* Remove max-width to fit smaller devices */
+        padding: 10px; /* Balanced padding for usability */
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #workout-container {
+        padding: 10px;
+    }
+
+    video {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+}
+.exercise video {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .exercise video {
+        max-width: 100%;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%;
+    }
+}
