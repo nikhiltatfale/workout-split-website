@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workout Planner</title>
+    <title>Futuristic Workout Tracker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>My Weekly Workout Plan</h1>
-    <div class="days">
-        <button onclick="showWorkout('monday')">Monday</button>
-        <button onclick="showWorkout('tuesday')">Tuesday</button>
-        <button onclick="showWorkout('wednesday')">Wednesday</button>
-        <button onclick="showWorkout('thursday')">Thursday</button>
-        <button onclick="showWorkout('friday')">Friday</button>
-        <button onclick="showWorkout('saturday')">Saturday</button>
+    <div class="container">
+        <header class="header">
+            <h1>💪 Futuristic Gym Tracker</h1>
+            <p>Track your progress with style.</p>
+        </header>
+
+        <div class="days-navigation">
+            <button onclick="showWorkout('monday')">Monday</button>
+            <button onclick="showWorkout('tuesday')">Tuesday</button>
+            <button onclick="showWorkout('wednesday')">Wednesday</button>
+            <button onclick="showWorkout('thursday')">Thursday</button>
+            <button onclick="showWorkout('friday')">Friday</button>
+            <button onclick="showWorkout('saturday')">Saturday</button>
+        </div>
+
+        <div id="workout-container" class="workout-container">
+            <p>Select a day to view your workout.</p>
+        </div>
     </div>
-    <div id="workout-container">
-        <p>Select a day to view the workout plan.</p>
-    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
