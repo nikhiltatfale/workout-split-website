@@ -1,122 +1,121 @@
-/* General styles */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(120deg, #000428, #004e92);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start; /* Changed from center to start */
+    height: 100vh;
+    overflow-y: auto; /* Added to prevent clipping */
 }
 
-h1 {
-    margin: 20px 0;
-    color: #333;
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-.days {
+.header h1 {
+    font-size: 2.5rem;
+    color: #00ffff;
+    text-shadow: 0px 0px 10px #00ffff;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #ffffffbb;
+}
+
+/* Day Navigation Buttons */
+.days-navigation {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
     justify-content: center;
-    gap: 15px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-bottom: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
+.days-navigation button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
     border: none;
-    border-radius: 25px;
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    max-width: 200px; /* Restrict width for medium size */
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-button:hover {
-    background-color: #0056b3;
+.days-navigation button:hover {
+    background: rgba(0, 255, 255, 0.8);
+    color: #000;
+    box-shadow: 0px 5px 25px rgba(0, 255, 255, 0.8);
     transform: scale(1.05);
 }
 
-#workout-container {
-    margin-top: 30px;
-    text-align: left;
+/* Workout Container */
+.workout-container {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    max-width: 90%; /* Adjust to fit smaller screens */
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Ensure scrolling within the container if needed */
+    max-height: calc(100vh - 200px); /* Ensure visibility within the viewport */
+    margin-bottom: 20px; /* Space below the container */
 }
 
 .exercise {
-    margin: 20px 0;
-}
-
-video {
-    width: 100%;
-    max-width: 400px;
+    margin: 10px 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 24px;
-    }
-
-    button {
-        font-size: 14px; /* Slightly smaller font for tablets */
-        padding: 8px 16px;
-        max-width: 180px; /* Slightly smaller width for medium screens */
-    }
-
-    #workout-container {
-        padding: 15px;
-    }
+.exercise:hover {
+    background: rgba(0, 255, 255, 0.2);
+    transform: scale(1.02);
+    box-shadow: 0px 5px 20px rgba(0, 255, 255, 0.3);
 }
 
-@media (max-width: 480px) {
-    button {
-        width: 90%; /* Keep buttons consistent on mobile */
-        max-width: none; /* Remove max-width to fit smaller devices */
-        padding: 10px; /* Balanced padding for usability */
-        font-size: 14px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    #workout-container {
-        padding: 10px;
-    }
-
-    video {
-        max-width: 100%;
-        border-radius: 8px;
-    }
+.exercise h2 {
+    font-size: 1.5rem;
+    color: #00ffff;
 }
+
 .exercise video {
-    width: 100%;
-    max-width: 300px;
+    width: 90%;
+    max-width: 400px;
     margin: 10px auto;
-    display: block;
     border-radius: 10px;
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .exercise video {
-        max-width: 100%;
+    .header h1 {
+        font-size: 2rem;
     }
 
-    button {
-        font-size: 14px;
-        padding: 8px;
-        width: 90%;
+    .days-navigation button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .exercise h2 {
+        font-size: 1.2rem;
+    }
+
+    .workout-container {
+        max-height: calc(100vh - 150px); /* Adjust height for smaller screens */
     }
 }
